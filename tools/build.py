@@ -161,7 +161,7 @@ def jsonld_for(meta: dict, crumbs: list[tuple[str, str]], faqs: list[tuple[str, 
     canonical = abs_url(meta["slug"])
     common = {"url": canonical, "name": meta["title"], "description": meta["description"],
               "inLanguage": "en", "dateModified": UPDATED_ISO,
-              "isPartOf": {"@type": "WebSite", "@id": SITE_URL + "/#website"}}
+              "isPartOf": {"@id": SITE_URL + "/#website"}}
 
     if kind == "home":
         graph.append({
