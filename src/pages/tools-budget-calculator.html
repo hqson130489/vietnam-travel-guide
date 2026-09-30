@@ -1,0 +1,112 @@
+<!--
+title: Vietnam Trip Budget Calculator
+description: Estimate what a Vietnam trip costs: choose your days, group size, comfort level and stops to see a breakdown for hotels, food, transport and activities.
+h1: Vietnam Trip Budget Calculator
+slug: /tools/budget-calculator/
+kind: tool
+scripts: calculator
+nav: tools
+crumb: Budget calculator
+og: og/default.jpg
+og_alt: Vietnam Travel Guide budget calculator
+-->
+
+<p class="lead">Work out roughly what your Vietnam trip will cost before you book anything. Pick how long you are going, how many people are travelling, the comfort level you want and the places you plan to sleep. The calculator adds up accommodation, food, local transport, activities and the journeys between stops, and shows a low and a high figure for each.</p>
+
+<form class="calc" id="budget-calculator" novalidate>
+  <div class="calc-grid">
+    <div class="field">
+      <label for="days">Nights in Vietnam</label>
+      <input type="number" id="days" name="days" value="10" min="1" max="60" step="1" inputmode="numeric">
+      <span class="hint">Count nights, not days — a 10-night trip is about 11 days on the ground.</span>
+    </div>
+    <div class="field">
+      <label for="travelers">Travellers</label>
+      <input type="number" id="travelers" name="travelers" value="2" min="1" max="20" step="1" inputmode="numeric">
+      <span class="hint">Rooms are counted as two people sharing; solo travellers pay a single-room rate.</span>
+    </div>
+    <div class="field">
+      <span class="label" id="style-label">Comfort level</span>
+      <div class="styles" role="radiogroup" aria-labelledby="style-label">
+        <label><input type="radio" name="style" value="budget"> Budget</label>
+        <label><input type="radio" name="style" value="mid" checked> Mid-range</label>
+        <label><input type="radio" name="style" value="comfort"> Comfort</label>
+      </div>
+      <span class="hint">Budget is guesthouses and street food, comfort is four and five-star hotels.</span>
+    </div>
+  </div>
+
+  <fieldset class="cities">
+    <legend>Where you plan to stay</legend>
+    <p class="hint">Tick the places you will sleep in. Stops in different regions add a flight or a long train ride to the estimate.</p>
+    <div class="styles">
+      <label><input type="checkbox" name="city" value="hanoi" checked> Hanoi</label>
+      <label><input type="checkbox" name="city" value="ninhtbinh"> Ninh Binh</label>
+      <label><input type="checkbox" name="city" value="halong"> Ha Long / Lan Ha Bay</label>
+      <label><input type="checkbox" name="city" value="sapa"> Sapa</label>
+      <label><input type="checkbox" name="city" value="hue"> Hue</label>
+      <label><input type="checkbox" name="city" value="hoian" checked> Hoi An / Da Nang</label>
+      <label><input type="checkbox" name="city" value="hcmc" checked> Ho Chi Minh City</label>
+      <label><input type="checkbox" name="city" value="mekong"> Mekong Delta</label>
+      <label><input type="checkbox" name="city" value="phuquoc"> Phu Quoc</label>
+    </div>
+  </fieldset>
+
+  <div class="calc-actions">
+    <button type="button" class="btn btn--ghost" id="calc-print">Print or save as PDF</button>
+    <button type="reset" class="btn btn--ghost">Reset</button>
+  </div>
+</form>
+
+<div id="calc-output" aria-live="polite"></div>
+
+<noscript>
+  <p class="calc-noscript">The calculator needs JavaScript. You can still use the planning ranges in our <a href="{{BASE}}itineraries/">itineraries</a>, where each route lists a budget, mid-range and comfort total.</p>
+</noscript>
+
+<h2 id="how-to-read">How to read the estimate</h2>
+<p>The numbers come from ranges we review every few months, and they are deliberately wide. A guesthouse room in Ninh Binh in February and the same room during a national holiday are not the same price, and a domestic flight booked three months ahead can cost half of one booked three days ahead. Use the low figure as a best case with early booking and quiet dates, and the high figure as a comfortable buffer.</p>
+
+<div class="callout">
+  <p><strong>What is included:</strong> accommodation, food and drink, local transport, entrance fees and typical day tours, one SIM or eSIM per person, tipping and small extras, plus an average cost for each journey between the stops you ticked.</p>
+  <p><strong>What is not included:</strong> international flights, travel insurance, visa fees, alcohol beyond a drink with meals, spa treatments, shopping, and any luxury upgrade you decide on the day.</p>
+</div>
+
+<h2 id="ways-to-spend-less">Where the money actually goes</h2>
+<p>Accommodation is the single biggest lever, and it is the easiest to control: moving one comfort level down typically saves more than all the other categories combined. Food is the second surprise for many visitors — eating where locals eat can cost a fraction of hotel restaurants without giving anything up. Internal flights are the third big line, so a route that runs in one direction, rather than doubling back, usually pays for itself.</p>
+<ul>
+  <li><strong>Book the overnight boat and the Tet period first.</strong> Those two sell out and the prices only move one way.</li>
+  <li><strong>Use night trains or sleeper buses once or twice</strong> to save a hotel night, but not every night — you still need proper sleep.</li>
+  <li><strong>Pay in local currency where you can.</strong> Cards are widely accepted in cities, but small vendors, markets and some guesthouses are cash only, and ATM fees add up.</li>
+  <li><strong>Leave a buffer.</strong> Most trips end up 10–15% above plan once you add a cooking class, a tailor or a second boat trip you did not expect to want.</li>
+</ul>
+
+<h2 id="made-to-measure">If you would rather not plan it yourself</h2>
+<p>This calculator is for independent travel. If you want someone local to build the route, book the boats and drivers, and hold the plan together while you are there, <a href="https://vibevietnamtour.com/">Vibe Vietnam Tour</a> designs tailor-made Vietnam itineraries and quotes them with inclusions listed line by line.</p>
+
+<section class="faq">
+  <h2 id="faq">Frequently asked questions</h2>
+  <details>
+    <summary>How accurate is this calculator?</summary>
+    <p>It is a planning estimate, not a quote. The daily ranges are reviewed in September 2026 and are based on typical mid-season prices. Expect the real total to land inside the range if you book a few weeks ahead and travel outside the busiest weeks; expect the high end, or more, if you travel during Tet or book late.</p>
+  </details>
+  <details>
+    <summary>Why does the estimate show a range instead of one number?</summary>
+    <p>Because prices in Vietnam move with the season, the day of the week and how far ahead you book. A single number would look precise and be wrong. The range shows the spread between a quiet week booked early and a busy week booked late, so you can plan with a realistic buffer.</p>
+  </details>
+  <details>
+    <summary>How much should I budget per day in Vietnam?</summary>
+    <p>A backpacker sticking to guesthouses, street food and buses can travel on roughly $40–70 per person per day. A mid-range trip with three-star hotels, restaurants and some guided days usually runs $90–150. Comfort travel with four and five-star hotels and private drivers commonly starts around $200 per person per day.</p>
+  </details>
+  <details>
+    <summary>Are internal flights included?</summary>
+    <p>Yes, as an average per journey. The calculator counts the legs between the stops you tick and applies a same-region rate, such as a van from Hanoi to Ninh Binh, or a cross-region rate that reflects a domestic flight, such as Hanoi to Da Nang. If you take the train instead, the cost is usually similar or slightly lower.</p>
+  </details>
+  <details>
+    <summary>Does the calculator store my numbers?</summary>
+    <p>No. Everything runs in your browser with plain JavaScript, and there is no analytics, no cookie and no server call. If you reload the page the numbers reset, and nothing about your trip is sent anywhere. You can safely use it on a shared or work computer.</p>
+  </details>
+</section>
+
+<h2 id="next-steps">Next steps</h2>
+<p>Once you have a rough number, compare it against a ready-made route. The <a href="{{BASE}}itineraries/5-days-north-vietnam/">five-day northern itinerary</a>, the <a href="{{BASE}}itineraries/7-days-north-to-central/">seven-day Hanoi to Hoi An route</a> and the <a href="{{BASE}}itineraries/10-days-vietnam-north-to-south/">ten-day north-to-south trip</a> each include a three-tier budget table you can check this estimate against.</p>

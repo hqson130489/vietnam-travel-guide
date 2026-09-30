@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<link rel="canonical" href="{{CANONICAL}}">
+<meta name="robots" content="{{ROBOTS}}">
+<meta name="theme-color" content="#0e4a4f">
+{{HREFLANG}}
+<meta property="og:type" content="{{OG_TYPE}}">
+<meta property="og:site_name" content="Vietnam Travel Guide">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:url" content="{{CANONICAL}}">
+<meta property="og:image" content="{{OG_IMAGE}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{OG_IMAGE_ALT}}">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{OG_TITLE}}">
+<meta name="twitter:description" content="{{DESCRIPTION}}">
+<meta name="twitter:image" content="{{OG_IMAGE}}">
+<link rel="icon" type="image/png" sizes="64x64" href="{{BASE}}assets/img/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{BASE}}assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Manrope:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="{{BASE}}assets/css/main.css">
+{{JSONLD}}
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{BASE}}">
+      <img src="{{BASE}}assets/img/logo-white.png" alt="Vibe Vietnam Tour" width="132" height="32" decoding="async">
+      <span class="brand-name">Vietnam Travel Guide</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="{{BASE}}"{{NAV_HOME}}>Home</a></li>
+        <li><a href="{{BASE}}itineraries/"{{NAV_ITIN}}>Itineraries</a></li>
+        <li><a href="{{BASE}}guides/"{{NAV_GUIDES}}>Guides</a></li>
+        <li><a href="{{BASE}}tools/budget-calculator/"{{NAV_TOOLS}}>Budget calculator</a></li>
+        <li><a href="{{BASE}}about/"{{NAV_ABOUT}}>About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+{{BREADCRUMB}}
+    <article class="page">
+      <header class="page-head">
+        <h1>{{H1}}</h1>
+{{PAGE_META}}
+      </header>
+{{HERO}}
+{{BODY}}
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <p class="footer-title">Vietnam Travel Guide</p>
+      <p>A project by <a href="https://vibevietnamtour.com/">Vibe Vietnam Tour</a>. Practical, original planning notes for first-time visitors to Vietnam.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="{{BASE}}itineraries/">Itineraries</a></li>
+        <li><a href="{{BASE}}guides/">Guides</a></li>
+        <li><a href="{{BASE}}tools/budget-calculator/">Budget calculator</a></li>
+        <li><a href="{{BASE}}about/">About</a></li>
+        <li><a href="{{BASE}}sitemap.xml">Sitemap</a></li>
+      </ul>
+    </nav>
+    <p class="footer-legal">Prices and travel times are estimates for planning, reviewed September 2026. Written content licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, code MIT. No cookies, no trackers, no personal data collected.</p>
+  </div>
+</footer>
+{{SCRIPTS}}
+</body>
+</html>
