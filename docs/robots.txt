@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hqson130489.github.io/vietnam-travel-guide/sitemap.xml
